@@ -1,0 +1,69 @@
+.about
+  height: 355px
+  margin-top: 100px
+  margin-bottom: 40px
+  &__wrap
+    position: relative
+    height: 100%
+    padding-top: 40px  
+  &__img
+    position: absolute
+    height: 100%
+    width: 923px
+    right: 0
+    top: 0
+    z-index: -1
+  &__main
+    // -webkit-filter: blur(10px)
+    // filter: blur(10px)
+    color: #fff
+    width: 878px
+    height: 285px
+    border-radius: 5px
+    padding: 32px 55px 32px 30px
+    background-color: rgba($green, 0.8 )
+    z-index: 1
+    position: relative
+    background-image: url(../img/blur.png)
+  &__title
+    position: absolute
+    top: -50px
+    left: 0
+
+  &__text
+    display: flex
+  &__text-block
+    width: 392px
+    color: #fff
+    line-height: 1.715
+    font-weight: light
+    padding-left: 20px
+    &:not(:last-child)
+      padding-right: 20px
+      padding-left: 0
+  &__text-after
+    position: absolute
+    right: 35px
+    bottom: 20px
+    display: flex
+    font-weight: lighter
+    font-style: italic
+    font-size: 24px
+  &__painting
+    margin-right: 50px
+    margin-top: 30px
+    letter-spacing: 0.04em
+    position: relative
+    &::before
+      content: ""
+      position: absolute
+      background-color: #fff
+      height: 1px
+      width: 40px
+      left: -58px
+      top: calc(50% - 5px)
+  &__btn-wrap
+    padding-top: 25px
+    display: flex
+    justify-content: center
+    padding-bottom: 10px

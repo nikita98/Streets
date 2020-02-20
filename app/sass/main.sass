@@ -1,0 +1,280 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "sections/header"
+@import "sections/footer"
+@import "sections/about"
+@import "sections/raffle"
+@import "sections/news"
+@import "blocks/owl-carousel"
+@import "blocks/nav"
+@import "blocks/product"
+
+*
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+
+ul
+  list-style: none
+
+body
+  padding: 0
+  margin: 0
+  background-color: $body-bg
+  background-color: $bg
+  font-size: 14px
+  min-width: 320px
+  position: relative
+  line-height: 1.65
+  font-family: $default-font
+  // overflow-x: hidden
+  color: $text
+// input, textarea
+// border: #666 1px solid
+// outline: none
+// &:focus:required:invalid
+// border-color: red
+// &:required:valid
+// border-color: green
+button:active, button:focus
+  outline: none!important
+
+h1
+  font: 800 74px $default-font
+
+h2
+  font-size: 26px
+  color: #02245c
+  font-weight: bold
+  padding-right: 20px
+  padding-left: 5px
+  position: relative
+  z-index: 10
+  &::after
+    content: ""
+    position: absolute
+    left: 0
+    bottom: 5px
+    z-index: -1
+    background-color: #ffd41c
+    height: 13px
+    width: 100%
+
+h3
+  z-index: 10
+  position: relative
+  font-size: 16px
+  color: $blue
+  letter-spacing: 0.02em
+  padding-left: 15px
+  padding-right: 35px
+  &::after
+    content: ""
+    position: absolute
+    left: 0
+    bottom: 0px
+    z-index: -1
+    background-color: #ffd41c
+    height: 10px
+    width: 100%
+  .arrow
+    position: absolute
+    top: 17px
+    right: 10px
+    height: 3px
+    width: 10px
+    background-color: $blue
+    transform: rotate(-45deg)
+    &::after
+      content: ""
+      position: absolute
+      bottom: 0
+      right: 0px
+      height: 10px
+      width: 3px
+      background-color: $blue
+a
+  color: $text
+  text-decoration: none
+
+.container
+  width: 1360px
+  margin: 0 auto
+  padding: 0 30px
+  height: 100%
+  // display: flex
+  // flex-direction: column
+
+.section-double
+  display: flex
+  justify-content: center
+  height: 100%
+
+  &__item
+    width: 50%
+    padding-top: 50px
+    display: flex
+    justify-content: flex-end
+    height: 100%
+    overflow: hidden
+    &:last-child
+      justify-content: flex-start
+
+  &__inner
+    width: 650px
+    height: 100%
+.hide-bg
+  position: absolute
+  content: ""
+  height: 0
+  width: 50vw
+  left: 50%
+  top: 0
+  background-image: url(../img/violet-line-bg.png)
+  background-repeat: repeat-x
+  &_active
+    height: 430px
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+  &.img-width
+    width: 100%
+
+.text-center
+  text-align: center
+
+.logo
+  height: 50px
+  width: 50px
+  &__img
+    height: 100%
+    width: 100%
+
+.phone
+  &__number
+    font-family: "MyriadPro"
+    font-size: 800
+    font-size: 19px
+
+.social
+  display: flex
+  &__icon
+    height: 25px
+    width: 25px
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    margin-right: 20px
+
+.btn
+  cursor: pointer
+  text-decoration: none
+  background-color: $accent
+  color: #fff
+  font-size: 17px
+  min-width: 200px
+  min-height: 50px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding-left: 30px
+  padding-right: 10px
+  border-radius: 50px
+  &__arrow
+    width: 30px
+    height: 30px
+    margin-left: 15px
+    border-radius: 100%
+    background-color: $accent
+    position: relative
+    &::before
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-70%, -50%) rotate(45deg)
+      content: ""
+      z-index: 10
+      background-color: #fff
+      height: 12px
+      width: 12px
+      border-radius: 1px
+    &::after
+      top: 50%
+      left: -10%
+      transform: translate(55%, -50%) rotate(-45deg)
+      position: absolute
+      content: ""
+      z-index: 10
+      background-color: $accent
+      height: 12px
+      width: 12px
+
+  &:hover &__arrow
+    background-color: #993587
+
+  &:hover &__arrow::after
+    background-color: #993587
+.btn-alter
+  width: 166px
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  border-radius: 50px
+  position: relative
+
+  &__link
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    border-radius: 50px
+    width: 50px
+  &__text
+    width: 166px
+    background-color: #a0c73b
+    color: #fff
+    padding: 8px 50px 8px 30px
+    margin-right: 10px
+    font-size: 14px
+    font-weight: bold
+    line-height: 1.3em
+    cursor: pointer
+    text-decoration: none
+    display: flex
+    align-items: center
+    justify-content: space-between
+    border-radius: 50px
+    height: 50px
+    transform: scale(0, 1)
+    transition: 0.3s
+    transform-origin: right
+    &:hover
+      transform: scale(1, 1)
+
+    
+      
+  &__icon
+    cursor: pointer
+    z-index: 2
+    position: absolute
+    padding: 10px 15px
+    display: block
+    border-radius: 100%
+    background-color: #a0c73b
+    height: 50px
+    transition: 0.3s
+    transform-origin: right, center
+    &:hover ~ .btn-alter__text
+      transform: scale(1, 1)
+
+  &__hide
+    position: absolute
+    right: 0
+    top: 0
+    height: 100%
+    width: 20px
+    background-color: $accent
+    z-index: 1
+@import "media" // Always at the end

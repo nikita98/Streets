@@ -1,0 +1,179 @@
+
+.owl-carousel-wrap
+  display: block
+  padding-left: 90px
+  position: relative
+  height: 100%
+
+  .curved-line
+    position: absolute
+    top: 205px
+    right: 40px
+
+  .bg-circle
+    background-color: #ffd41c
+    width: 125px
+    height: 125px
+    border-radius: 100%
+    position: absolute
+    top: 380px
+    right: 250px
+
+
+.owl-carousel
+  height: 100%
+  position: relative
+  margin: 157px 30px 0 0
+  box-sizing: border-box
+
+
+  &__title
+    color: $accent
+    margin-bottom: 35px
+  
+  &__text
+    padding-left: 6px
+    width: 260px
+    line-height: 1.7
+    margin-bottom: 40px
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: start
+    padding-right: 30px
+    background-color: #e1ebf3
+    background-image: url(../img/table.png)
+    background-repeat: no-repeat
+    background-position: right -160px top 90px
+    height: 100vh
+
+    &_bg-bag
+      background-image: url(../img/bag.png)
+  .owl-nav
+    position: absolute
+    left: 0px
+    top: -90px
+  
+  .owl-prev
+    height: 50px
+    width: 50px
+    position: relative
+    border: 2px solid #b784b6!important
+    border-radius: 50px!important
+    margin-right: 20px!important
+    &:hover
+      background-color: #e1ebf3!important
+      border: 2px solid $accent!important
+    &::before
+      content: ""
+      width: calc(50% + 5px)
+      height: 100%
+      position: absolute
+      left: 50%
+      top: -10px
+      background-color: #e1ebf3
+      transition: 0.3s
+      transform: skewY(35deg)
+    
+    &:hover::before
+      width: 0px
+      height: 5px
+
+    span
+      font-size: 0
+      &::before
+        top: calc(50% - 5px)
+        right: calc(50% - 5px)
+        transform: rotate(-45deg) 
+        position: absolute
+        content: ""
+        z-index: 10
+        background-color: #993587
+        height: 3px
+        width: 15px
+        border-radius: 2px
+      &::after
+        content: ""
+        position: absolute
+        top: calc(50% + 4px)
+        right: calc(50% - 5px)
+        transform: rotate(45deg) 
+        background-color: #993587
+        height: 3px
+        width: 15px
+        border-radius: 2px
+  
+  .owl-next
+    height: 50px
+    width: 50px
+    position: relative
+    border: 2px solid #b784b6!important
+    border-radius: 50px!important
+    &:hover
+      background-color: #e1ebf3!important
+      border: 2px solid $accent!important
+    &::before
+      content: ""
+      width: calc(50% + 5px)
+      height: 100%
+      position: absolute
+      right: 50%
+      top: -10px
+      background-color: #e1ebf3
+      transition: 0.3s
+      transform: skewY(-35deg)
+    
+    &:hover::before
+      width: 0px
+      height: 5px
+
+    span
+      font-size: 0
+      &::before
+        top: calc(50% - 5px)
+        left: calc(50% - 5px)
+        transform: rotate(45deg) 
+        position: absolute
+        content: ""
+        z-index: 10
+        background-color: #993587
+        height: 3px
+        width: 15px
+        border-radius: 2px
+      &::after
+        content: ""
+        position: absolute
+        top: calc(50% + 4px)
+        left: calc(50% - 5px)
+        transform: rotate(-45deg) 
+        background-color: #993587
+        height: 3px
+        width: 15px
+        border-radius: 2px
+        
+  .owl-dots
+    position: absolute
+    left: -95px
+    top: -80px
+    display: flex
+    flex-direction: column
+
+    span
+      margin: 0 !important
+      height: 8px !important
+      width: 8px !important
+      margin: 7px !important
+      transition: 0.5s !important
+
+    .owl-dot
+      display: flex
+      justify-content: center
+      align-items: center
+      
+      span
+        background-color: #919da5
+
+      &.active
+        span
+          height: 40px !important
+          background-color: $accent
