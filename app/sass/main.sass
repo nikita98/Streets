@@ -126,6 +126,7 @@ a
     height: 100%
 .hide-bg
   position: absolute
+  z-index: 10
   content: ""
   height: 0
   width: 50vw
@@ -133,6 +134,7 @@ a
   top: 0
   background-image: url(../img/violet-line-bg.png)
   background-repeat: repeat-x
+  background-color: rgba($accent, 0.8)
   &_active
     height: 430px
 
@@ -167,7 +169,11 @@ a
     display: flex
     align-items: flex-start
     justify-content: center
-    margin-right: 20px
+    margin-right: 15px
+    svg
+      opacity: 0.502
+    &:hover svg
+      opacity: 1
 
 .btn
   cursor: pointer
@@ -253,8 +259,6 @@ a
     &:hover
       transform: scale(1, 1)
 
-    
-      
   &__icon
     cursor: pointer
     z-index: 2
@@ -271,7 +275,7 @@ a
 
   &__hide
     position: absolute
-    right: 0
+    right: 3px
     top: 0
     height: 100%
     width: 20px
